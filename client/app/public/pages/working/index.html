@@ -1,0 +1,18 @@
+<template name="publicPageWorking">
+
+    <div class="container py-5">
+        <div class="bg-primary text-white mb-2 py-3 text-center" style="width: 100px; height: 100px;">
+            {{count.get}} - {{maps.get 'count'}}
+        </div>
+        <ul>
+            {{#each todos}}
+            <li class="list-group-item">
+                {{name}}
+            </li>
+            {{/each}}
+        </ul>
+        <button class="btn btn-primary brd-add mb-2">Add</button>
+        <button class="btn btn-primary brd-insert">Insert</button>
+    </div>
+
+</template>

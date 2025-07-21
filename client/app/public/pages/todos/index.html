@@ -1,11 +1,40 @@
-<template name="publicPageTodos">
-
+<!-- <template name="publicPageTodos">
   <div class="container">
-
     <h4>publicPageTodos</h4>
-
-
   </div>
+</template> -->
 
 
+<template name="publicPageTodos">
+  {{#let _todos=(state.get 'todos')}}
+    <div>
+      <h1>Todos</h1>
+      <button class="btn btn-outline-primary brd-todo-create">Oluştur</button>
+    </div>
+    <div class="row">
+      {{#each _todos}}
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100 text-start">
+            <div class="card-body">
+              <h4 class="card-title">{{title}}</h4>
+              <p class="card-text">{{description}}</p>
+            </div>
+            <div class="card-footer d-flex gap-2 justify-content-between">
+              <small>deneme</small>
+              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button class="btn btn-warning btn-sm brd-todo-update" data-bs-toggle="modal"
+                  data-bs-target="#brdPublicModalTodoUpdateModal">Düzenle</button>
+
+                <button class="btn btn-danger ms-2 btn-sm brd-todo-delete">Sil</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/let}}
+  <!-- todocreate ve deleti bu sayfada çalıştırmak için çağırdık -->
+  {{> publicModalTodoCreate}}
+  {{> publicModalTodoUpdate}}
 </template>

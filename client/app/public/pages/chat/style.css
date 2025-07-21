@@ -1,0 +1,13 @@
+.publicPageChat .brd-chat-content {
+  height: 300px;
+}
+.publicPageChat .brd-chat-input {
+  height: 50px;
+}
+.publicPageChat .brd-chat-input .form-control:focus {
+  box-shadow: unset !important;
+}
+.publicPageChat .brd-chat-message-item {
+  max-width: 300px;
+  width: 300px;
+}/*# sourceMappingURL=style.css.map */

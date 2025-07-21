@@ -85,3 +85,62 @@
 {{/if}} -->
 
 </template>
+
+
+<!-- <template name="pagesHome">
+  <div class="pagesHome">
+    <h1>pages klasörü içinden çağırıldım</h1> -->
+  <!-- {{name}} ? main.html içinde name="yazı yazar" eklersek "yazı yazar" yazdırır -->
+
+  <!-- {{#if isAdmin}}  -->
+    <!-- ? isAdmin true ise bu blok çalışır -->
+    <!-- <p>Admin var</p>   ! main.html içinde isAdmin=true eklersek çalışır -->
+  <!-- {{else}} -->
+    <!-- ? isAdmin false ise bu blok çalışır -->
+    <!-- <p>Admin yok.</p>
+  {{/if}} -->
+
+  <!-- * unless: isAdmin false ise çalışır (if'in tersi) -->
+  <!-- {{#unless isAdmin}}
+    <p>Kullanıcı admin değil (unless bloğu)</p>
+  {{/unless}} -->
+
+  <!-- * car dizisini listeleyen ul-li yapısı -->
+  <!-- <ul> -->
+    <!-- {{#each car}} ? car bir dizi ise, her eleman için döner -->
+      <!-- <li>{{@index}}. {{name}} {{model}}</li> ? @index: elemanın sırasını verir -->
+    <!-- {{/each}}
+  </ul> -->
+
+   
+  <!-- {{#let upperCaseName=(upperCase name) }} 
+  <h4>{{upperCaseName}}</h4>
+  {{/let}} 
+
+  {{#if eq '1' '0'}} 
+    <div>eşit</div> 
+  {{else}}
+    <div>eşit değil</div>
+  {{/if}} -->
+
+  <!-- <button class="brd-btn-click" id="event">Click</button> -->
+
+  <!-- * with: car nesnesini geçici bağlam olarak kullanır -->
+  <!-- {{#with car}}  -->
+    <!-- {{../name}} ! bir üst bağlamdaki name'e erişir -->
+    <!-- {{name}} ? car objesindeki name -->
+    <!-- {{model}} ? car objesindeki model -->
+  <!-- {{/with}} -->
+
+  <!-- * car dizisini with içinde each ile tekrar listeleme örneği -->
+  <!-- {{#with car}} -->
+    <!-- <span>{{xxx}}</span> ? Eğer car içinde xxx yoksa boş gelir -->
+    <!-- <ul> -->
+      <!-- {{#each this}} ? "this" car içindeki dizi ise her eleman için döner -->
+        <!-- {{../../name}} ! iki üst bağlamdaki name’e erişim -->
+        <!-- <li>{{@index}}. {{name}} {{model}}</li>
+      {{/each}}
+    </ul>
+  {{/with}}
+  </div>
+</template> -->

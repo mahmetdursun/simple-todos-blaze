@@ -197,3 +197,59 @@ Template.publicPageHome.events({
 Template.publicPageHome.onDestroyed(function () {
 
 });
+
+
+
+
+// const car = [{name: 'Tesla', model: 'Model S'},{name: 'BMW', model: 'E30'}]; // mindex.html de kullandık
+
+
+// // ! name dediği kısım pages/home/index.html deki template name ile eşleşiyor
+
+// Template.pagesHome.onCreated(function () { //? template çalıştırıldığında
+//   const self = this;
+
+//   this.name = "Ahmet"; //? template içinde kullanılacak değişkeni tanımladık
+//   console.log(this.data);
+
+//   // this.data = this.data || {}; //? data değişkenini tanımladık, eğer data yoksa boş bir obje olarak tanımladık
+//   // this.data.name = "Selim"; //? template içinde kullanılacak data değişkenini tanımladık
+//   // console.log(this.data);
+// });
+
+// Template.pagesHome.onRendered(function () { //? template render edildiğinde
+//   const self = this;
+// });
+
+// Template.pagesHome.onDestroyed(function () { //? template html den kaybolunduğunda
+//   const self = this;
+
+// });
+
+// Template.pagesHome.helpers({ //? template fonksiyonlarını dışarıya açar
+//   upperCase: function (name) {  
+//     const self = Template.instance(); //? template instance'ını alır
+//     return name ?.toUpperCase(); //? name değişkenini büyük harfe çevirir
+//   },
+//   eq: function (a, b) { //? a ve b değişkenlerini karşılaştırır
+//     return a === b; //? eğer a ve b eşitse true döner
+//   },
+// });
+
+// Template.pagesHome.events({ //? template içindeki olayları dinler
+//   'click .brd-btn-click': function (event, template) {
+//     alert("Butona tıklandı!"); //? butona tıklandığında alert gösterir
+//     event.preventDefault(); //? olayın varsayılan davranışını engeller
+//     console.log(event); //? olay nesnesini konsola yazdırır
+//     console.log(template); //? template nesnesini konsola yazdırır
+//   },
+// });
+
+// const Template1 = {
+//   pagesHome: {
+//     name: "Ahmet",
+//     data:{ //? pages/home/index.html içinde template karşılık gelir
+//       name: "Selim", 
+//     }, 
+//   },
+// };

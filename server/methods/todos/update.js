@@ -9,8 +9,9 @@ new ValidatedMethod({
   run: function (data) {
     this.unblock();
 
-    Todos.update({ _id: data._id }, {
-      $set: data.todo
+    const { _id, todo } = data;
+    return Todos.update({ _id }, {
+      $set: todo,
     });
 
   }

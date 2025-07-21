@@ -1,0 +1,17 @@
+.publicPageChat {
+  .brd-chat-content {
+    height: 300px;
+  }
+
+  .brd-chat-input {
+    height: 50px;
+    .form-control:focus {
+      box-shadow: unset !important;
+    }
+  }
+
+  .brd-chat-message-item{
+    max-width: 300px;
+    width: 300px;
+  }
+}

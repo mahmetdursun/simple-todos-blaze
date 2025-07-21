@@ -2,10 +2,12 @@
 
   <div class="publicLayoutDefault d-flex flex-column min-vh-100">
     {{> publicComponentNavbar}}
+     <!--! Bu template, tüm sayfalarda ortak olarak kullanılacak ana görünüm yapısıdır. -->
 
     <div class="flex-fill">
       <div class="h-100">
         {{> Template.dynamic template=page}}
+         <!--? Bu satırda, hangi sayfa bileşeni render edilecekse onun adı "page" parametresiyle belirlenir.. -->
       </div>
     </div>
 

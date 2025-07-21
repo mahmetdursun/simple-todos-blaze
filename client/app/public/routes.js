@@ -21,9 +21,17 @@ FlowRouter.route('/about', {
   }
 });
 
+FlowRouter.route('/working', {
+  name: 'public.working',
+  action: function (params, queryParams) {
+    this.render('publicLayoutDefault', { page: 'publicPageWorking' });
+  }
+});
+
 FlowRouter.route('/chat', {
   name: 'public.chat',
-  triggersEnter: [MustSignIn],
+  //! BUNU YORUM SATIRINA ALDIK ÇÜNKÜ CHAT SAYFASININ İÇ KISMINA GİRİŞ ZORUNLULUĞU EKLEYECEĞİM
+  // triggersEnter: [MustSignIn], 
   action: function (params, queryParams) {
     this.render('publicLayoutDefault', { page: 'publicPageChat' });
   }
@@ -31,7 +39,7 @@ FlowRouter.route('/chat', {
 
 FlowRouter.route('/classes', {
   name: 'public.classes',
-  triggersEnter: [MustSignIn],
+  triggersEnter: [MustSignIn], //? GİRİŞ YAPMA ZORUNLULUĞU VAR
   action: function (params, queryParams) {
     this.render('publicLayoutDefault', { page: 'publicPageClasses' });
   }

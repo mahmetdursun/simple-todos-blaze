@@ -16,16 +16,18 @@ Template.publicModalTodoUpdate.events({
   'submit form#brdPublicModalTodoUpdateForm': function (event, template) {
     event.preventDefault();
 
-    const todo = AppUtil.temp.get('todo');
+    const todo = AppUtil.temp.get('todo'); //? html de let _todo içinde get ile çağırıcaz
 
     const name = event.target.name.value
     const description = event.target.description.value
+    const state = event.target.state.value;
 
     const obj = {
       _id: todo._id,
       todo: {
         name: name,
         description: description,
+        state: state,
       }
     }
 

@@ -1,4 +1,4 @@
-Meteor.publish('messages.list', function (roomId) {
+Meteor.publish('messagess.list', function (roomId) {
   if (Meteor.userId()) {
     return Messages.find({ roomId: roomId });
   }

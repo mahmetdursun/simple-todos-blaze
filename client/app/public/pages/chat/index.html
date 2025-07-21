@@ -1,4 +1,4 @@
-<template name="publicPageChat">
+<!-- <template name="publicPageChat">
   {{#let _room=(state.get 'room')}}
     <div class="container py-4">
 
@@ -75,4 +75,75 @@
 
     </div>
   {{/let}}
+</template> -->
+
+
+
+<template name="publicPageChat">
+  <div class="publicPageChat container py-4">
+
+    <div class="d-flex justify-content-between mb-3">
+      <h1 class="mb-0 text-white">Chat</h1>
+    </div>
+
+    <div class="row g-2">
+      <div class="col-md-4">
+        Users
+      </div>
+
+      <!-- Messages Section -->
+      <div class="col-md-8">
+        <div class="card h-100">
+          <div class="card-header">
+            Chat
+          </div>
+          <div class="card-body d-flex flex-column gap-2 brd-chat-content overflow-auto">
+            {{#if currentUser}}
+
+              {{#if eq messages.length 0}}
+                <div class="d-flex flex-column gap-2 py-4 text-center">
+                  <h4 class="mb-0 fw-bold">Hiç mesaj yok</h4>
+                  <p class="text-muted">İlk mesajı at</p>
+                </div>
+              {{else}}
+                <!--! helperdaki messages i çektik -->
+                {{#each messages}}
+                  {{#let _user=(getUser userId)}}
+                    <div
+                      class="d-flex flex-column gap-1 py-1 px-2 rounded-3 brd-chat-message-item
+                {{#if eq currentUser._id _user._id}}align-self-end bg-warning{{else}}align-self-start bg-primary{{/if}}">
+                      <span class="fw-normal">{{payload.text}}</span>
+                      {{#with payload.chatGPT}}
+                        <h6 class="fw-bold align-self-end">Chat GPT Cevap</h6>
+                        {{#each choices}}
+                          <span class="fw-normal align-self-end">{{text}}</span>
+                        {{/each}}
+                      {{/with}}
+                      <span class="fw-light text-muted small">
+                        {{_user.profile.name}} {{_user.profile.lastName}}
+                      </span>
+                    </div>
+                  {{/let}}
+                {{/each}}
+              {{/if}}
+            {{else}}
+              <div class="d-flex flex-column gap-2 py-4 text-center">
+                <h4 class="mb-0 fw-bold">Lütfen giriş yapınız</h4>
+                <p class="text-muted">Mesajları görebilmek için lütfen giriş yapınız.</p>
+                <a href="{{pathFor 'auth.signIn'}}" class="btn btn-primary align-self-center"
+                  style="width: 100px;">Giriş</a>
+              </div>
+            {{/if}}
+
+          </div>
+          <form id="brdPublicPageChatMessageCreateForm" class="card-footer p-1 d-flex">
+            <input class="form-control border-0 rounded-0 brd-chat-input" type="text" name="text">
+            <button form="brdPublicPageChatMessageCreateForm" type="submit" class="btn btn-success rounded-0">
+              <i class="fas fa-paper-plane fa-fw"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

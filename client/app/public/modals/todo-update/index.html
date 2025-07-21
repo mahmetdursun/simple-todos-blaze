@@ -13,17 +13,33 @@
               <form id="brdPublicModalTodoUpdateForm">
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="brdPublicModalTodoUpdateName" name="name" value="{{name}}" required placeholder=" ">
+                  <input type="text" class="form-control" id="brdPublicModalTodoUpdateName" name="name"
+                    value="{{_todo.name}}" required placeholder=" ">
                   <label for="brdPublicModalTodoUpdateName">Name</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="brdPublicModalTodoUpdateDescription" name="description" value="{{description}}" placeholder=" ">
+                  <input type="text" class="form-control" id="brdPublicModalTodoUpdateDescription" name="description"
+                    value="{{_todo.description}}" placeholder=" ">
                   <label for="brdPublicModalTodoUpdateDescription">Description</label>
                 </div>
 
-              </form>
+                <div class="form-floating mb-3">
+                  <select class="form-select" id="brdPublicModalTodoUpdateState" name="state">
+                    <option selected>Open this select menu</option>
+                    {{#if eq _todo.state 'in-progress'}}
+                      <option value="in-progress" selected>In-progress</option>
+                      <option value="done">Done</option>
+                    {{/if}}
 
+                    {{#if eq _todo.state 'done'}}
+                      <option value="done" selected>Done</option>
+                      <option value="in-progress">In-progress</option>
+                    {{/if}}
+                  </select>
+                  <label for="brdPublicModalTodoUpdateState">State</label>
+                </div>
+              </form>
             </div>
           {{/with}}
           <div class="modal-footer">

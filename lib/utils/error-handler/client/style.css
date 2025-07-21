@@ -1,0 +1,6 @@
+.is-invalid + label {
+  color: var(--bs-danger);
+}
+.is-invalid + label:after {
+  content: attr(data-content);
+}/*# sourceMappingURL=style.css.map */

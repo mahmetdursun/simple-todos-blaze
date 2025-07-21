@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Köpüren Temizleyici", 
+    "brand": "CeraVe",
+    "category": "Yüz Temizleme",
+    "imageLink": "https://media.cerave.com.tr/~/media/Project/Loreal/BrandSites/CeraVe/Master/CeraVeEuroHub/Turkey/Product/cleansers/foaming-cleanser.png",
+    "skinType": "Yağlı Cilt"
+  },
+  {
+    "name": "Nemlendirien Temizleyici",
+    "brand": "CeraVe",
+    "category": "Yüz Temizleme",
+    "imageLink": "https://media.cerave.com.tr/~/media/Project/Loreal/BrandSites/CeraVe/Master/CeraVeEuroHub/Turkey/Product/Gallery/CeraVe_HC_16oz_LBL_GP1_Front_NewImage.png",
+    "skinType": "Kuru Cilt"
+  },
+  {
+    "name": "Effaclar Gel",
+    "brand": "La Roche Posay",
+    "category": "Yüz Temizleme",
+    "imageLink": "https://cdn.demorgoup.net/la-roche-posay-effaclar-yagli-ciltler-icin-temizleme-jeli-400ml-la-roche-posay-136200-23-0.jpg",
+    "skinType": "Yağlı Cilt"
+  },
+  {
+    "name": "Cleanance Gel Nettoyant Cleansing Gel",
+    "brand": "Avene",
+    "category": "Yüz Temizleme",
+    "imageLink": "https://media-pierre-fabre.wedia-group.com/api/media/dam/transform/u5wa3z31qn5seppjsriphl6psti9gphkwz4qu384v/pf_square/u5wa3z31qn5seppjsriphl6psti9gphkwz4qu384v?tt=resize&height=700",
+    "skinType": "Yağlı Cilt"
+  },
+  {
+    "name": "Atopia Cleansing Cream",
+    "brand": "Cosmed",
+    "category": "Yüz Temizleme",
+    "imageLink": "https://www.cosmed.com.tr/Content/Urun/750x1000%20CLEANISING%20CREAM.jpg",
+    "skinType": "Atopik Cilt"
+  }
+]

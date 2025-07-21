@@ -8,15 +8,17 @@
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2",
+    "@babel/runtime": "^7.27.6",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@popperjs/core": "^2.9.2",
     "array-query": "^0.1.2",
     "bcrypt": "^5.0.1",
-    "bootstrap": "^5.0.2",
+    "bootstrap": "^4.6.2",
     "jquery": "^3.5.1",
     "meteor-node-stubs": "^1.0.1",
+    "openai": "^3.1.0",
     "popper.js": "^1.16.1",
     "simpl-schema": "^1.12.0",
-    "sweetalert2": "^11.1.0"
+    "sweetalert2": "^11.22.2"
   }
 }

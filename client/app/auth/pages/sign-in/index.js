@@ -15,7 +15,7 @@ Template.authPageSignIn.events({
         return;
       }
 
-      const redirect = FlowRouter.getQueryParam('redirect');
+      const redirect = FlowRouter.getQueryParam('redirect'); //? REDİRECT VARSA KULLANICIYI YÖNLENDİRECEK
 
       if (redirect) {
         FlowRouter.go(redirect);
